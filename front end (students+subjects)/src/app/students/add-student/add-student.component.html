@@ -1,0 +1,32 @@
+<div class=" container ">
+  <h3 class=" jumbotron "> Enter new Student </h3>
+  <table class="table table-light">
+      <tbody>
+        <tr>
+          <td>ID </td>
+          <td>    <input type="number" [(ngModel)]="addedStudent._id" disabled />
+          </td>
+    
+        </tr>
+        <tr>
+            <td> Name </td>
+            <td>    <input type="text" [(ngModel)]="addedStudent.name"/>
+            </td>
+      
+          </tr>
+          <tr>
+            <td> Age </td>
+            <td>    <input type="number" [(ngModel)]="addedStudent.age"/>
+            </td>
+      
+          </tr>
+          <tr >
+            <td ><button class="btn btn-outline-success" (click)="addStudent()" > ADD </button></td>
+          </tr>
+      </tbody>
+    </table>
+    
+ 
+</div>
+
+<router-outlet></router-outlet>

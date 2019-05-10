@@ -1,0 +1,32 @@
+<div class=" container ">
+  <h3 class=" jumbotron "> Update Student Details: </h3>
+  <table class="table table-light">
+      <tbody>
+        <tr>
+          <td>ID </td>
+          <td>    <input disabled type="number" [ngModel]="editStudent._id"/>
+          </td>
+    
+        </tr>
+        <tr>
+            <td> Name </td>
+            <td>    <input type="text" [(ngModel)]="editStudent.name"/>
+            </td>
+      
+          </tr>
+          <tr>
+            <td> Age </td>
+            <td>    <input type="text" [(ngModel)]="editStudent.age"/>
+            </td>
+      
+          </tr>
+          <tr >
+            <td ><button class="btn btn-outline-primary" (click)="updateStudent()" > Update </button></td>
+          </tr>
+      </tbody>
+    </table>
+    
+ 
+</div>
+
+<router-outlet></router-outlet>

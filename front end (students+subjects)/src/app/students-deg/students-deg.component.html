@@ -1,0 +1,32 @@
+
+<div class="container">
+<br>
+  <h2>Assign Students to Subjects</h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+
+      <h3>Select students</h3>
+      <div class="form-group">
+        <select #StdNames id="StdNames" class="form-control " multiple>
+          <option *ngFor="let item of stdsrv.listStudents" value="{{item._id}}" >{{item.name}}</option>
+       
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h3>Select Subjects</h3>
+      <div class="form-group">
+        <select #StdSubj id="my-input" class="form-control"  multiple>
+          <option *ngFor="let item of subjsrv.sbjs" value="{{item._id}}">{{item.name}}</option>
+         
+        </select>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-success" type="button" (click)='assign(StdNames, StdSubj)'>Assign</button>
+    </div>
+  </div>
+</div>

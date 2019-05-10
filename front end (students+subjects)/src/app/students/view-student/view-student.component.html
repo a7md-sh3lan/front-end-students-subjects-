@@ -1,0 +1,21 @@
+<div class=" container ">
+  <h1>{{student?.name}}</h1>
+  <table class="table table-light">
+    <thead>
+      <th>subject</th>
+      <th>degree</th>
+      <th></th>
+      <th></th>
+    </thead>
+      <tbody>
+        <tr *ngFor="let subject of student?.subjects">
+          <td>{{subject.subject.name}}</td>
+          <td><input #degree type="text" value="{{subject.degree}}" placeholder="degree"></td>
+          <td><button class="btn btn-primary" (click)="grade(subject.subject._id, degree.value)">submit</button></td>
+          <td><button class="btn btn-danger" (click)="deleteSubject(subject.subject._id)">delete</button></td>
+        </tr>
+          
+      </tbody>
+    </table>
+
+</div>

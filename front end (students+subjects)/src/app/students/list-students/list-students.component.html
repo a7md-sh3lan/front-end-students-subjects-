@@ -1,0 +1,33 @@
+<div class=" container ">
+  <h3 class=" jumbotron "> Students list </h3>
+  <table class="table  table-bordered">
+    <tbody>
+      <tr>
+        <th> # </th>
+        <th> Name </th>
+        <th> Age </th>
+  
+      </tr>
+      <tr *ngFor="let item of stdSrv.listStudents">
+        <td>{{item._id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+       <td> <button class="btn btn-outline-info"(click)="edit(item._id)"> Edit </button></td> 
+      <td> <button class="btn btn-outline-danger"(click)="delete(item._id)"> Delete </button></td>
+      <td> <button class="btn btn-outline-secondary"(click)="view(item._id)"> View  </button></td>
+
+      </tr>
+      <tr>
+        <td colspan="6">
+          <a [routerLink]="['/students/add']">
+          <button class="btn btn-success">Add New Student..</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<router-outlet></router-outlet>
+
+

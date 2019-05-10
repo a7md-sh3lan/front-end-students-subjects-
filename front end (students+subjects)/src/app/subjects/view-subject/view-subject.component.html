@@ -1,0 +1,20 @@
+<div class=" container ">
+  <h1>{{name}}</h1>
+  <table class="table table-light">
+    <thead>
+      <th>ID</th>
+      <th>student</th>
+      <th>degree</th>
+      <th></th>
+    </thead>
+      <tbody>
+        <tr *ngFor="let subject of subjects">
+          <td>{{subject._id}}</td>
+          <td>{{subject.name}}</td>
+          <td>{{subject.subjects[0].degree}}</td>
+        </tr>
+          
+      </tbody>
+    </table>
+
+</div>
